@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopWise AI — Your Intelligent Shopping Companion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script>
+  window.wxOConfiguration = {
+    orchestrationID: "c171e3d6ffbc416dbd311f62480af3a9_66156665-b95c-4481-9ba3-c023fb966d49",
+    hostURL: "https://au-syd.watson-orchestrate.cloud.ibm.com",
+    rootElementID: "root",
+    deploymentPlatform: "ibmcloud",
+    crn: "crn:v1:bluemix:public:watsonx-orchestrate:au-syd:a/c171e3d6ffbc416dbd311f62480af3a9:66156665-b95c-4481-9ba3-c023fb966d49::",
+    chatOptions: {
+        agentId: "60ff01ac-9c1a-458f-8980-8e821b2a26c2", 
+    }
+  };
+  setTimeout(function () {
+    const script = document.createElement('script');
+    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+    script.addEventListener('load', function () {
+        wxoLoader.init();
+    });
+    document.head.appendChild(script);
+  }, 0);                     
+</script>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-mark">◆</span> ShopWise <span class="logo-accent">AI</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#how-it-works" class="nav-link">How It Works</a>
+                <a href="#ai-assistant" class="nav-link">AI Assistant</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light theme">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="grid-overlay"></div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-text">
+                <p class="eyebrow">Final-Year AI Project · Retail Intelligence</p>
+                <h1 class="hero-title">
+                    <span class="typing" id="typingText">ShopWise AI</span>
+                </h1>
+                <p class="hero-subtitle">Your Intelligent Shopping Companion</p>
+                <p class="hero-desc">
+                    ShopWise AI reads the market before you buy — comparing prices across stores,
+                    screening reviews for fakes, and predicting the right moment to purchase.
+                    One assistant, every product, zero guesswork.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#ai-assistant" class="btn btn-primary">Get Started</a>
+                    <a href="#features" class="btn btn-outline">Explore Features</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="cart-card glass">
+                    <div class="cart-card-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                    </div>
+                    <div class="cart-icon">🛒</div>
+                    <div class="scan-line"></div>
+                    <div class="cart-tag tag-1">Price ↓ 18%</div>
+                    <div class="cart-tag tag-2">✔ Verified Reviews</div>
+                    <div class="cart-tag tag-3">Best Time: Now</div>
+                </div>
+                <div class="float-chip chip-1">🔍 Multimodal Search</div>
+                <div class="float-chip chip-2">⚡ Real-time Alerts</div>
+            </div>
+        </div>
+
+        <div class="scroll-cue">Scroll to explore ↓</div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <p class="eyebrow center">About the Project</p>
+            <h2 class="section-title center">What is ShopWise AI?</h2>
+            <p class="section-intro center">
+                ShopWise AI is an intelligent shopping assistant built to remove the guesswork from
+                online buying. It watches prices, reads reviews at scale, and learns your preferences
+                so every purchase decision is backed by data — not marketing.
+            </p>
+
+            <div class="about-grid">
+                <div class="about-card reveal">
+                    <div class="about-icon">💰</div>
+                    <h3>Price Comparison</h3>
+                    <p>Scans multiple retailers simultaneously to surface the lowest genuine price.</p>
+                </div>
+                <div class="about-card reveal">
+                    <div class="about-icon">🕵️</div>
+                    <h3>Fake Reviews</h3>
+                    <p>Flags manipulated ratings and bot-written reviews before they mislead you.</p>
+                </div>
+                <div class="about-card reveal">
+                    <div class="about-icon">🎯</div>
+                    <h3>Recommendations</h3>
+                    <p>Matches products to your actual needs, not just trending searches.</p>
+                </div>
+                <div class="about-card reveal">
+                    <div class="about-icon">⏱️</div>
+                    <h3>Best Time to Buy</h3>
+                    <p>Predicts price drops using historical trend data so you never overpay.</p>
+                </div>
+                <div class="about-card reveal">
+                    <div class="about-icon">🧩</div>
+                    <h3>Personalized Shopping</h3>
+                    <p>Learns your style and budget to tailor every suggestion to you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <p class="eyebrow center">Capabilities</p>
+            <h2 class="section-title center">Everything Your Shopping Needs</h2>
+
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI Product Recommendations</h3>
+                    <p>Personalized picks generated from your browsing patterns and stated preferences.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📊</div>
+                    <h3>Price Comparison</h3>
+                    <p>Live comparison across major retailers, updated continuously.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🚫</div>
+                    <h3>Fake Review Detection</h3>
+                    <p>NLP models trained to spot inflated ratings and inorganic review patterns.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>Multimodal Search</h3>
+                    <p>Search by typing, speaking, or uploading a photo of the product you want.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📈</div>
+                    <h3>Best Time to Buy Prediction</h3>
+                    <p>Forecasts price movement so you know whether to buy now or wait.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🧮</div>
+                    <h3>Smart Shopping Dashboard</h3>
+                    <p>One view of prices, ratings, and trends for every product you're tracking.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📋</div>
+                    <h3>Personalized Shopping Lists</h3>
+                    <p>Organize wishlist items with AI-suggested alternatives and bundles.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🔔</div>
+                    <h3>Price Drop Alerts</h3>
+                    <p>Instant notifications the moment a tracked product's price falls.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-container">
+            <p class="eyebrow center">Process</p>
+            <h2 class="section-title center">How It Works</h2>
+
+            <div class="timeline">
+                <div class="timeline-step reveal">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Enter Product Details</h3>
+                        <p>Type, speak, or upload an image of the product you're considering.</p>
+                    </div>
+                </div>
+                <div class="timeline-step reveal">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>AI Collects Information</h3>
+                        <p>ShopWise gathers listings, prices, and reviews from across the web.</p>
+                    </div>
+                </div>
+                <div class="timeline-step reveal">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Compare & Analyze</h3>
+                        <p>The engine cross-checks prices and screens reviews for authenticity.</p>
+                    </div>
+                </div>
+                <div class="timeline-step reveal">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Get the Best Option</h3>
+                        <p>Receive a ranked recommendation with reasoning you can trust.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== AI ASSISTANT DEMO ===== -->
+    <section class="ai-assistant" id="ai-assistant">
+        <div class="section-container">
+            <p class="eyebrow center">Try It</p>
+            <h2 class="section-title center">Talk to the Assistant</h2>
+            <p class="section-intro center">A frontend demo — try typing "smartphone", "laptop", "headphones", "shoes",
+                "compare iphone", or "best budget phone".</p>
+
+            <div class="chat-window glass">
+                <div class="chat-header">
+                    <span class="chat-dot"></span> ShopWise Assistant is online
+                </div>
+                <div class="chat-body" id="chatBody">
+                    <div class="chat-msg ai">
+                        <span class="avatar">🤖</span>
+                        <div class="bubble">Hi! Ask me about a product and I'll help you shop smarter.</div>
+                    </div>
+                </div>
+                <form class="chat-input-row" id="chatForm">
+                    <input type="text" id="chatInput" placeholder="Try: smartphone, laptop, compare iphone..."
+                        autocomplete="off">
+                    <button type="submit" class="btn btn-primary chat-send">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SMART DASHBOARD ===== -->
+    <section class="dashboard" id="dashboard">
+        <div class="section-container">
+            <p class="eyebrow center">Live View</p>
+            <h2 class="section-title center">Smart Shopping Dashboard</h2>
+
+            <div class="dashboard-grid">
+                <div class="dash-card reveal">
+                    <p class="dash-label">Lowest Price</p>
+                    <p class="dash-value">₹<span class="counter" data-target="18499">0</span></p>
+                </div>
+                <div class="dash-card reveal">
+                    <p class="dash-label">Highest Rating</p>
+                    <p class="dash-value"><span class="counter" data-target="48" data-decimal="10">0</span>/5</p>
+                </div>
+                <div class="dash-card reveal">
+                    <p class="dash-label">Best Value Score</p>
+                    <p class="dash-value"><span class="counter" data-target="92">0</span>%</p>
+                </div>
+                <div class="dash-card reveal">
+                    <p class="dash-label">Fake Review Score</p>
+                    <p class="dash-value"><span class="counter" data-target="7">0</span>%</p>
+                </div>
+                <div class="dash-card reveal">
+                    <p class="dash-label">Sustainability Score</p>
+                    <p class="dash-value"><span class="counter" data-target="76">0</span>/100</p>
+                </div>
+                <div class="dash-card reveal">
+                    <p class="dash-label">Price Trend</p>
+                    <p class="dash-value trend-down">↓ <span class="counter" data-target="12">0</span>%</p>
+                </div>
+                <div class="dash-card reveal">
+                    <p class="dash-label">Trending Product</p>
+                    <p class="dash-value dash-text">Wireless ANC Earbuds</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-container">
+            <p class="eyebrow center">Feedback</p>
+            <h2 class="section-title center">What People Say</h2>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Found me a laptop ₹6,000 cheaper than what I was about to buy. Paid for itself in one search."
+                    </p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar">RA</div>
+                        <div><strong>Riya A.</strong><span>Verified Shopper</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"The fake review detector caught a listing I would have trusted. Genuinely useful."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar">SK</div>
+                        <div><strong>Sahil K.</strong><span>Verified Shopper</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★☆</div>
+                    <p>"Best time to buy predictions saved me from purchasing right before a sale."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar">PM</div>
+                        <div><strong>Priya M.</strong><span>Verified Shopper</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal">
+                    <div class="stars">★★★★★</div>
+                    <p>"Image search actually works — snapped a photo of shoes and it found the exact pair."</p>
+                    <div class="testimonial-user">
+                        <div class="user-avatar">DV</div>
+                        <div><strong>Dev V.</strong><span>Verified Shopper</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq" id="faq">
+        <div class="section-container narrow">
+            <p class="eyebrow center">Questions</p>
+            <h2 class="section-title center">Frequently Asked</h2>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">How does ShopWise AI work? <span class="faq-arrow">⌄</span></button>
+                    <div class="faq-answer">
+                        <p>It combines web scraping, NLP-based review analysis, and predictive pricing models to give
+                            you a ranked, trustworthy recommendation.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Does it compare multiple websites? <span
+                            class="faq-arrow">⌄</span></button>
+                    <div class="faq-answer">
+                        <p>Yes — it checks listings across major retailers to find the genuinely lowest price, not just
+                            the first result.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can it detect fake reviews? <span class="faq-arrow">⌄</span></button>
+                    <div class="faq-answer">
+                        <p>Yes. A trained classifier flags patterns typical of bot-generated or incentivized reviews and
+                            scores each listing's authenticity.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Does it support image search? <span class="faq-arrow">⌄</span></button>
+                    <div class="faq-answer">
+                        <p>Yes — upload a photo and ShopWise AI matches it against its product database to find the
+                            closest listings.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Is it free? <span class="faq-arrow">⌄</span></button>
+                    <div class="faq-answer">
+                        <p>This demo is a free final-year academic project and is not a commercial product.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="contact" id="contact">
+        <div class="section-container narrow">
+            <p class="eyebrow center">Get in Touch</p>
+            <h2 class="section-title center">Contact Us</h2>
+
+            <form class="contact-form glass" id="contactForm" novalidate>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your name">
+                    <span class="form-error" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com">
+                    <span class="form-error" id="emailError"></span>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Tell us what you think"></textarea>
+                    <span class="form-error" id="messageError"></span>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Submit</button>
+                <p class="form-success" id="formSuccess">Message sent — thank you!</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="section-container footer-grid">
+            <div class="footer-brand">
+                <a href="#home" class="logo">◆ ShopWise <span class="logo-accent">AI</span></a>
+                <p>Your intelligent shopping companion — built as a final-year AI project.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="GitHub">🐙</a>
+                    <a href="#" aria-label="LinkedIn">💼</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Instagram">📷</a>
+                </div>
+                <p class="footer-email">contact@shopwiseai.demo</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 ShopWise AI. Built for academic demonstration purposes.</p>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
